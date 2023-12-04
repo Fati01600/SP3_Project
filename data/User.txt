@@ -1,6 +1,3 @@
-fifi,1
-sam,7823
-cam,8943
-peter,5678
-ulla,9675
-cecilie,cec1234
+fati,3203
+juju,9342
+Madi,3721

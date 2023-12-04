@@ -40,7 +40,7 @@ public class FileIO implements Data {
     }
 
     @Override
-    public String[] readMediaData (String path, int length) {
+    public String[] readMediaData(String path, int length) {
         int count = 0;
         String[] data = new String[length];
         File file = new File(path);
@@ -54,6 +54,11 @@ public class FileIO implements Data {
         }catch(FileNotFoundException e){
             System.out.println("File not found");
         }
-        return data;
+        return null;
+    }
+
+
+    public Set<Media> readSerieData() {
+        return null;
     }
 }

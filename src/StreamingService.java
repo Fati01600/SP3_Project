@@ -19,8 +19,9 @@ public class StreamingService {
         media = createMedia(movieData, "Movies");
 
         String[] serieData = io.readMediaData("data/series.txt", 100);
-        createMedia(serieData, "Series");
-
+        createMedia(serieData, "Series");*/
+        media.addAll(dbConnector.readMovieData());
+        media.addAll(dbConnector.readSerieData());
         users = io.readUserData("data/User.txt");
 
         menu.displayStartMenu();
@@ -47,8 +48,10 @@ public class StreamingService {
             if(currentUser == null){
                 ui.displayMessage("Unsuccessfull login, please try again.");
                 runSignInDialog();
+                System.out.println(currentUser.toString());
+            } else {
+                System.out.println(currentUser.toString());
             }
-            System.out.println(currentUser.toString());
         } else {
             runSignUpDialog();
         }
